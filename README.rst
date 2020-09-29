@@ -1,4 +1,10 @@
 ======================
+quickstart
+======================
+just copy repo, and do:
+docker stack deploy --compose-file="docker-compose.yml" rabbits
+
+======================
 rabbitmq-swarm-cluster
 ======================
 
