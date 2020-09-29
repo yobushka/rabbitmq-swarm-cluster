@@ -21,3 +21,4 @@ services:
     ports:
       - "5672:5672"   # amqp
       - "15672:15672" # web ui
+      - "15692:15692" # prometheus metrics
