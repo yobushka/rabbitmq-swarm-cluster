@@ -25,7 +25,7 @@ do
     exit 1
   fi
   retry=false
-  nodes=`nslookup tasks.$SERVICE_NAME 2>/dev/null | grep -v $(hostname) | grep Address | awk '{print $4}' | cut -d. -f1-3`
+  nodes=`nslookup tasks.$SERVICE_NAME 2>/dev/null | grep -v $(hostname) | grep Address | grep -v 127.0.0.1 | awk '{print $2}' | cut -d. -f1-3`
   for node in $nodes
   do
     if [[ "$node" != $SERVICE_NAME* ]]
