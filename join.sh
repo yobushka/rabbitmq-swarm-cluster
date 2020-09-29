@@ -72,7 +72,8 @@ do
         echo "Try to reach $node"
         if nc -z "$node" 15672
         then
-            rabbitmqctl join_cluster rabbit@$node
+            rabbitnode=`nslookup 10.0.14.3 2> /dev/null | grep name | cut -d " " -f 3`
+            rabbitmqctl join_cluster rabbit@$rabbitnode
             if [[ $? == "0" ]]
             then
                 echo
