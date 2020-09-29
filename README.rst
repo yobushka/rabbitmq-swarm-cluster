@@ -6,7 +6,8 @@ RabbitMQ 3.8.9
 quickstart
 ======================
 just copy repo, and do:
-docker stack deploy --compose-file="docker-compose.yml" rabbits
+
+  docker stack deploy --compose-file="docker-compose.yml" rabbits
 
 ======================
 rabbitmq-swarm-cluster
